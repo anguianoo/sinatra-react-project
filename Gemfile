@@ -35,7 +35,17 @@ gem "sqlite3", "~> 1.4"
 gem "require_all", "~> 3.0"
 
 # These gems will only be used when we are running the application locally
-group :development do
+# group :development do
+
+# end
+
+# These gems will only be used when we are running tests
+group :development ,:test do
+  gem "database_cleaner", "~> 2.0"
+  gem "rack-test", "~> 1.1"
+  gem "rspec", "~> 3.10"
+  gem "rspec-json_expectations", "~> 2.2"
+  gem 'faker'
   gem "pry", "~> 0.14.1"
 
   # Automatically reload when there are changes
@@ -43,10 +53,8 @@ group :development do
   gem "rerun"
 end
 
-# These gems will only be used when we are running tests
-group :test do
-  gem "database_cleaner", "~> 2.0"
-  gem "rack-test", "~> 1.1"
-  gem "rspec", "~> 3.10"
-  gem "rspec-json_expectations", "~> 2.2"
-end
+gem 'psych', '< 4'
+
+gem 'wdm', '>= 0.1.0'
+
+gem 'puma'

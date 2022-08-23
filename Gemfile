@@ -53,8 +53,8 @@ group :development ,:test do
   gem "rerun"
 end
 
-gem 'psych', '< 4'
+# gem 'psych', '< 4'
 
-gem 'wdm', '>= 0.1.0'
+# gem 'wdm', '>= 0.1.0'
 
-gem 'puma'
+# gem 'puma'
